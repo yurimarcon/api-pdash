@@ -51,7 +51,7 @@ export default {
     async salvar(){
         await axios({
           method: 'put',
-          url: 'http://localhost:3000/mesa',
+          url: process.env.VUE_APP_URL_BASE_BACKEND + 'mesa',
           data: this.mesa
         }).then(()=>{
           if(this.$store.state.exibicaoDoObjeto.class){

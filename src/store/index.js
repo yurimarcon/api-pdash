@@ -22,7 +22,8 @@ export default new Vuex.Store({
       // console.log(state.exibicaoDoObjeto)
     },
     buscaObjects(state, classe){
-      axios.get('http://localhost:3000/'+classe)
+      // axios.get('http://localhost:3000/'+classe)
+      axios.get(process.env.VUE_APP_URL_BASE_BACKEND + classe)
         .then((response)=>{
           state.objetosListados = response.data
           console.log(response.data);

@@ -107,7 +107,7 @@ export default {
     },
     methods:{
       async salvar(){
-        let classe = this.$store.state.exibicaoDoObjeto.class;
+        // let classe = this.$store.state.exibicaoDoObjeto.class;
         // let id = this.$store.state.exibicaoDoObjeto._id;
         this.object.title = this.object.nome;
         this.object.subtitle = this.object.empresa;
@@ -117,7 +117,7 @@ export default {
 
         await axios({
           method: 'put',
-          url: 'http://localhost:3000/' + classe,
+          url: process.env.VUE_APP_URL_BASE_BACKEND + 'leads',
           data: this.object
         }).then(()=>{
           if(this.$store.state.exibicaoDoObjeto.class){

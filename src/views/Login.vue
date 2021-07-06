@@ -35,6 +35,7 @@
 
             <form @submit.prevent="submit">
                 <v-text-field
+                v-model="user"
                 class="mx-4"
                 outlined
                 label="Login"
@@ -42,6 +43,7 @@
                 ></v-text-field>
 
                 <v-text-field
+                v-model="psw"
                 class="mx-4"
                 outlined
                 label="Senha"
@@ -52,7 +54,8 @@
                 outlined
                 color="primary darken-3"
                 class="Button-Login"
-                type="submit"
+                
+                @click="login()"
                 >
                     submit
                 </v-btn>
@@ -65,7 +68,23 @@
 
 <script>
 export default {
-
+    data(){
+        return{
+            user:'',
+            psw:''
+        }
+    },
+    methods:{
+        login(){
+            console.log('oi');
+            if(this.user == 'adm' && this.psw == '123'){
+                this.$router.push({name:'Home'})
+            }else{
+                this.user = '';
+                this.psw = '';
+            }
+        }
+    }
 }
 </script>
 

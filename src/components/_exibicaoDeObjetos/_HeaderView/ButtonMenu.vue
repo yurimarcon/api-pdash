@@ -83,7 +83,7 @@ export default {
       if(classe && id){
         await axios({
           method: 'delete',
-          url: 'http://localhost:3000/' + classe,
+          url: process.env.VUE_APP_URL_BASE_BACKEND + classe,
           data: {"_id": id}
         }).then(()=>{
           if(this.$store.state.exibicaoDoObjeto.class){
@@ -101,6 +101,7 @@ export default {
     },
     async editar(){
       console.log('editando')
+      console.log(process.env.VUE_APP_TITLE)
     }
   },
 }
