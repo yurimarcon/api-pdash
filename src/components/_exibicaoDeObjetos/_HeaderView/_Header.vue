@@ -4,23 +4,22 @@
     gradient="to top right, rgba(5,86,155,.1), rgba(25,32,50,.1)"
     >
     <ButtonMenu />
-      <v-card-title class=" mt-8">
-          <v-avatar 
-          size="70"
-          tile
-          >
-          <img
-              alt="icon"
-              :src="$store.state.exibicaoDoObjeto.icon ? $store.state.exibicaoDoObjeto.icon : $store.state.iconDefault"
-          >
-          </v-avatar>
-          <div class="CabecalhoExibicao ml-3">
-              <span class="Title">{{$store.state.exibicaoDoObjeto.title}}</span>
-              <span class="Subtitle">{{$store.state.exibicaoDoObjeto.subtitle}}</span>
-          </div>
+        <v-card-title class=" mt-8">
+            <v-avatar 
+            size="70"
+            tile
+            >
+            <img
+                alt="icon"
+                :src="$store.state.exibicaoDoObjeto.icon ? $store.state.exibicaoDoObjeto.icon : $store.state.iconDefault"
+            >
+            </v-avatar>
+            <div class="CabecalhoExibicao ml-3">
+                <span class="Title">{{$store.state.exibicaoDoObjeto.title}}</span>
+                <span class="Subtitle">{{$store.state.exibicaoDoObjeto.subtitle}}</span>
+            </div>
           
-          
-      </v-card-title>
+        </v-card-title>
         
     </v-img>
 </template>

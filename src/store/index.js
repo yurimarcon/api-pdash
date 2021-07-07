@@ -11,7 +11,8 @@ export default new Vuex.Store({
     pacotes:[],
     classes:[],
     objetosListados: [],
-    exibicaoDoObjeto:{}
+    exibicaoDoObjeto:{},
+    modoEdicao:false
   },
   mutations: {
     alteraTema(state){
@@ -28,11 +29,18 @@ export default new Vuex.Store({
           state.objetosListados = response.data
           console.log(response.data);
         })
-    }
+    },
+    alternaModoEdicao(state){
+      state.modoEdicao = !this.state.modoEdicao
+    },
+    cancelaModoEdicao(state){
+      state.modoEdicao = false
+    },
   },
   actions: {
     exibicaoDoObjeto({commit},id){
-      commit('exibicaoDoObjeto', id)
+      commit('exibicaoDoObjeto', id);
+      commit('cancelaModoEdicao');
     },
   },
   modules: {

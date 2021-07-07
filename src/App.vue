@@ -76,8 +76,8 @@ import ButtonPluss from './components/buttonsNavRight/ButtonPluss.vue'
       drawer: null ,
       selectedItem: 1,
       workspaces: [
-        { text: 'Analytics', icon: 'mdi-desktop-mac-dashboard', to: '/about' },
-        { text: 'Explorer', icon: 'mdi-code-braces', to : '/home' },
+        { text: 'Analytics', icon: 'mdi-desktop-mac-dashboard', to: '/analytics' },
+        { text: 'Explorer', icon: 'mdi-code-braces', to : '/explorer' },
       ],
       
     }),
@@ -97,5 +97,9 @@ import ButtonPluss from './components/buttonsNavRight/ButtonPluss.vue'
 .scroll-container{
   overflow-y: scroll;
   height:90vh;
+}
+.Recize{
+  resize: horizontal;
+  overflow: auto;
 }
 </style>

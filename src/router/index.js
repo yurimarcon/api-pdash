@@ -14,9 +14,9 @@ Vue.use(VueRouter)
 
 const routes = [
   {
-    path: '/home',
-    name: 'Home',
-    component: () => import('../views/Home.vue'),
+    path: '/explorer',
+    name: 'Explorer',
+    component: () => import('../views/Explorer.vue'),
     children:[
       { path:'/', name: 'null', component: ViewNull },
       { path:'/leads', name: 'leads', component: ViewFaleConoscoInterno  },
@@ -24,13 +24,16 @@ const routes = [
       { path:'/eventosmkt', name: 'eventosmkt', component: EventosMKT  },
       { path:'/mesa', name: 'mesa', component: Mesa  },
       { path:'/createMesa', name: 'createMesa', component: CreateMesa  },
-      { path:'/analytics', name: 'analytics', component: ViewDeAnalytics1  },
+      { path:'/analyticsconfig', name: 'analyticsconfig', component: ViewDeAnalytics1  },
     ]
   },
   {
-    path: '/about',
-    name: 'About',
-    component: () => import('../views/About.vue')
+    path: '/analytics',
+    name: 'Analytics',
+    component: () => import('../views/Analytics.vue'),
+    children:[
+      { path:'/analytics', name: 'analytics', component: ViewDeAnalytics1  },
+    ]
   },
   {
     path: '/',

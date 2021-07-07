@@ -1,5 +1,8 @@
 <template>
-    <div class="scroll-container" ref="scrollContainer">
+    <div 
+    class="scroll-container" 
+    ref="scrollContainer"
+    >
         <v-card 
         :dark = $store.state.temaDark
         class="Altura"
@@ -8,8 +11,9 @@
             <TopBar 
             :showIcon="true"
             :input="$store.state.exibicaoDoObjeto.class"
-            />
+            />            
             <router-view
+            v-if="this.$store.state.exibicaoDoObjeto.class"
             id="View"
             ></router-view>
         </v-card>

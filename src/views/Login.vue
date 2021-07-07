@@ -21,18 +21,6 @@
                 Seja bem vindo
             </v-card-title>
 
-            <v-btn
-            color="primary darken-3"
-            class="Button-Login"
-            type="submit"
-            >
-                <v-icon class="mr-2">mdi-microsoft-windows</v-icon>
-                Entrar com AD
-            </v-btn>
-            <hr
-            class="mb-3"
-            >
-
             <form @submit.prevent="submit">
                 <v-text-field
                 v-model="user"
@@ -47,6 +35,7 @@
                 class="mx-4"
                 outlined
                 label="Senha"
+                type="password"
                 prepend-inner-icon="mdi-lock"
                 ></v-text-field>
 
@@ -60,6 +49,18 @@
                     submit
                 </v-btn>
                 <a class="d-flex justify-center" href="#">Esqueci minha senha</a>
+
+                <hr
+                class="my-3"
+                >
+                <v-btn
+                color="primary darken-3"
+                class="Button-Login"
+                type="submit"
+                >
+                    <v-icon class="mr-2">mdi-microsoft-windows</v-icon>
+                    Entrar com Azure AD
+                </v-btn>
 
             </form>
         </v-card>

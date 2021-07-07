@@ -49,9 +49,6 @@
         label="Descrição"
         v-model="object.descricao"
         ></v-textarea>
-        
-        
-
       </v-form>
     </div>
 
@@ -113,8 +110,6 @@ export default {
         this.object.subtitle = this.object.empresa;
         this.object.fornecedor = document.getElementById('fornecedor').value;
 
-        console.log(this.object)
-
         await axios({
           method: 'put',
           url: process.env.VUE_APP_URL_BASE_BACKEND + 'leads',
@@ -132,8 +127,8 @@ export default {
         })
       },
       cons(){
-        console.log(document.getElementById('fornecedor').value);
-        // console.log("this.object.fornecedor");
+        // console.log(document.getElementById('fornecedor').value);
+        console.log(this.props);
       }
     }
 }
