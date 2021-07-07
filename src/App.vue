@@ -21,11 +21,10 @@
       temporary
     >
     <div
-    class="pa-5"
+    class="pa-10"
     >
-
       <v-img
-        src="https://www.brasoftware.com.br/Imagens/Menu/brasoftware.png"
+        src="https://cdn.pixabay.com/photo/2017/01/31/23/42/animal-2028258_960_720.png"
       >
       </v-img>
     </div>
@@ -82,12 +81,16 @@ import ButtonPluss from './components/buttonsNavRight/ButtonPluss.vue'
       
     }),
     mounted(){
-      console.log(this.$route.path);
+      // console.log(this.$route.path);
     }
   }
 </script>
 
 <style>
+#ImagemLogotipo{
+  height: 80px;
+}
+
 .MargemDoTopo{
   margin-top: 22px;
 }
