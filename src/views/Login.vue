@@ -79,7 +79,7 @@ export default {
         login(){
             console.log('oi');
             if(this.user == 'adm' && this.psw == '123'){
-                this.$router.push({name:'Home'})
+                this.$router.push({name:'Explorer'})
             }else{
                 this.user = '';
                 this.psw = '';

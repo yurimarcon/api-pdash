@@ -9,6 +9,7 @@ import EventosMKT from '../components/_exibicaoDeObjetos/_Marketing/eventosmkt/e
 import Mesa from '../components/_exibicaoDeObjetos/_Desenvolvimento/mesa.vue'
 import CreateMesa from '../components/_exibicaoDeObjetos/_Desenvolvimento/CreateMesa.vue'
 import ViewDeAnalytics1 from '../components/_exibicaoDeObjetos/_Analytics/ViewAnalytics_1.vue'
+import AnalyticsConfig from '../components/_exibicaoDeObjetos/_Analytics/AnalyticsConfig.vue'
 
 Vue.use(VueRouter)
 
@@ -18,13 +19,13 @@ const routes = [
     name: 'Explorer',
     component: () => import('../views/Explorer.vue'),
     children:[
-      { path:'/', name: 'null', component: ViewNull },
-      { path:'/leads', name: 'leads', component: ViewFaleConoscoInterno  },
-      { path:'/createleads', name: 'createleads', component: CreateLead  },
-      { path:'/eventosmkt', name: 'eventosmkt', component: EventosMKT  },
-      { path:'/mesa', name: 'mesa', component: Mesa  },
-      { path:'/createMesa', name: 'createMesa', component: CreateMesa  },
-      { path:'/analyticsconfig', name: 'analyticsconfig', component: ViewDeAnalytics1  },
+      { path:'', name: 'null', component: ViewNull },
+      { path:'leads', name: 'leads', component: ViewFaleConoscoInterno  },
+      { path:'createleads', name: 'createleads', component: CreateLead  },
+      { path:'eventosmkt', name: 'eventosmkt', component: EventosMKT  },
+      { path:'mesa', name: 'mesa', component: Mesa  },
+      { path:'createMesa', name: 'createMesa', component: CreateMesa  },
+      { path:'analyticsconfig', name: 'analyticsconfig', component: AnalyticsConfig  },
     ]
   },
   {
@@ -32,7 +33,7 @@ const routes = [
     name: 'Analytics',
     component: () => import('../views/Analytics.vue'),
     children:[
-      { path:'/analytics', name: 'analytics', component: ViewDeAnalytics1  },
+      { path:'analytics', name: 'analytics', component: ViewDeAnalytics1},
     ]
   },
   {
