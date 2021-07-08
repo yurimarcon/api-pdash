@@ -55,7 +55,7 @@
         {
           title: 'CRM',
           items: [
-            {title: '*Pesoas', classe: ''},
+            {title: '*Pessoas', classe: ''},
             {title: '*Empresas', classe: ''},
             {title: '*Novas oportunidades', classe: ''},
             {title: '*Pipeline', classe: ''},
