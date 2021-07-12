@@ -18,6 +18,7 @@
                         v-for="(item, i) in $store.state.objetosListados"
                         :key="i"
                         cols="12"
+                        class="py-1"
                         >
 
                             <Card 
